@@ -8,16 +8,6 @@ function ItemListContainer() {
   const { categoryId } = useParams();
 
   async function requestProducts() {
-    /*  "/" -> categoryId -> undefined */
-    /*  "/category/remeras" -> categoryId -> remeras */
-
-    /*  let respuesta = [];
-    if(categoryId === undefined) {
-      respuesta = await getData();
-    }
-    else {
-      respuesta = await getData(categoryId);
-    } */
     let respuesta = categoryId
       ? await getCategoryData(categoryId)
       : await getData();

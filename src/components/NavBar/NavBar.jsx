@@ -1,43 +1,39 @@
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import CartWidget from './CartWidget/CartWidget';
+
 
 export default function NavBar() {
   return (
-    <nav>
+    <nav >
       <ul className="nav-menu">
         <h2>
           <li>
-            <Link to="/">miTienda</Link>
+            <Link to="/" className="title">Oversity Store</Link>
           </li>
         </h2>
         <li className="nav-item">
-          <Link className="nav-link" to="/category/indumentaria">
-            Indumentaria
+          <Link className="nav-link" to="/category/buzos">
+            Buzos
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/category/calzado">
-            Zapatillas
+          <Link className="nav-link" to="/category/pantalones">
+            Pantalones
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/product">
-            Detalle
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/prueba">
-            Accesorios
+          <Link className="nav-link" to="/category/remeras">
+            Remeras
           </Link>
         </li>
 
         <li className="nav-item">
           <Link className="nav-link" to="/facebook.com/mipage">
-            Seguinos...
+            Contacto
           </Link>
         </li>
-        {/* CartWidget*/}
-        <div>🛒</div>
+        <div><CartWidget/></div>
       </ul>
     </nav>
   );

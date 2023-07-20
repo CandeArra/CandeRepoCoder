@@ -1,10 +1,7 @@
 import "./button.css";
 
 function ButtonComponent(props) {
-  /* { colorFondo: "red", label: "Boton"} */
-  // destructuring
   const { children, colorFondo } = props;
-
   const styleButton = {
     backgroundColor: colorFondo,
   };
