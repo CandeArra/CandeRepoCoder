@@ -29,9 +29,8 @@ export default function NavBar() {
         </li>
 
         <li className="nav-item">
-          <Link className="nav-link" to="/facebook.com/mipage">
-            Contacto
-          </Link>
+          <a href="https://facebook.com/" className="nav-link" target="_blank">Contacto
+          </a>
         </li>
         <div><CartWidget/></div>
       </ul>

@@ -16,11 +16,11 @@ function ItemListContainer() {
 
   useEffect(() => {
     requestProducts();
-  }, []);
+  }, [categoryId]);
 
   return (
     <div>
-      <h1>Listado de Productos</h1>
+      <h1 className="tituloIndum">Indumentaria de Oversity Store</h1>
       <div className="flex-container">
         {products.map((item) => (
           <Item key={item.id} {...item} />

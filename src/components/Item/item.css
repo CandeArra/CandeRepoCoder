@@ -20,9 +20,7 @@ a{
     width: 320px;
     border-radius: 4px;
     background-color: #fff;
-    overflow: hidden;    
     transition: all ease-in 0.25s;
-    cursor: pointer;
   }
   
   .item-card_header{

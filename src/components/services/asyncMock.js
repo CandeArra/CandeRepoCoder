@@ -74,7 +74,7 @@ const productos = [
     },
     {
       title: "Jean cargo",
-      id: 8,
+      id: 9,
       stock: 2,
       description: "Jean cargo latest",
       img: "../../assets/jean.jpg",
@@ -83,7 +83,7 @@ const productos = [
     },
     {
       title: "Pantalon negro cargo",
-      id: 8,
+      id: 10,
       stock: 2,
       description: "Cargo black",
       img: "../../assets/pantalonnegro.jpg",
@@ -92,7 +92,7 @@ const productos = [
     },
     {
       title: "Buzo blanco estampado ",
-      id: 8,
+      id: 11,
       stock: 2,
       description: "Hoodie blanco",
       img: "../../assets/buzoblanco.jpg",
@@ -101,7 +101,7 @@ const productos = [
     },
     {
       title: 'Remera "Butterfly"',
-      id: 8,
+      id: 12,
       stock: 2,
       description: "Remera oversize",
       img: "../../assets/remera3.jpg",
@@ -111,7 +111,7 @@ const productos = [
   ];
   
   function getData() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         const date = new Date().toLocaleDateString;
         resolve(productos, date);
@@ -120,7 +120,7 @@ const productos = [
   }
   
   export function getProductData(idURL) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const productRequested = productos.find(
         (item) => item.id === Number(idURL)
       );
@@ -132,10 +132,8 @@ const productos = [
   }
   
   export function getCategoryData(categoryURL) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const categoryRequested = productos.filter((item) => {
-        /* .... */
-        //return (item.category.toLowerCase() === categoryURL.toLowerCase())
         return item.category.toLowerCase() === categoryURL.toLowerCase();
       });
   
