@@ -6,8 +6,8 @@ function ItemDetailContainer() {
   const [product, setProduct] = useState({});
   const { id } = useParams();
   async function requestProduct() {
-    const respuesta = await getProductData(id);
-    setProduct(respuesta);
+    const res = await getProductData(id);
+    setProduct(res);
   }
 
   useEffect(() => {
